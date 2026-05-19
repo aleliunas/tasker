@@ -1,6 +1,6 @@
-﻿---
+---
 id: 001
-title: Django + Docker Scaffold Setup
+title: Django + Docker Compose Skeleton
 status: idea
 priority: high
 supersedes: []
@@ -10,19 +10,15 @@ related: []
 created: 2026-05-19
 completed: null
 auto_safe: false
-auto_safe_reason: Initial scaffolding requires choosing directory layouts and core settings.
+auto_safe_reason: 'Greenfield scaffolding needs human review.'
 sensitive_paths_cleared: false
+sensitive_paths_cleared_reason: 'Infrastructure changes.'
 ---
 
-# IDEA-001: Django + Docker Scaffold Setup
+# IDEA-001: Django + Docker Compose Skeleton
 
-**Problem**: The project is currently an empty repository. We need to establish the Django 5.2.9 LTS foundation with a production-mirrored Docker environment.
-
-**Proposal**: 
-- Initialize Django 5.2.9 project structure.
-- Create `Dockerfile` and `compose.yml` (Django, Postgres, Redis).
-- Configure Daphne as the ASGI server.
-- Set up `Makefile` for developer shortcuts (up, down, migrate, etc.).
-- Establish the `apps/` directory for domain logic.
-
-**Why now**: This is the mandatory "Phase 1" to enable any further feature development or workflow testing.
+**Proposal**: Stand up the minimum runnable surface (Django 5.2.9 + Docker Compose).
+- Django package: tasker/
+- Apps: apps/
+- Stack: web (Daphne), db (Postgres), redis, nginx.
+- Tools: Makefile, requirements/, .env.template.
