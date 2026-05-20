@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title4">Sveiki atvykę į Tasker</h1>
+    <p class="t3 c-secondary" style="margin: 16px 0 32px;">
+        Jūsų asmeninis užduočių valdymo asistentas su Mistica dizaino sistema.
+    </p>
+    
+    <div class="row">
+        <a href="{% url 'admin:index' %}" class="mbtn mbtn-primary">Pradėti darbą</a>
+        <button class="mbtn mbtn-secondary" onclick="toggleTheme()">Keisti temą</button>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tasker{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/mistica.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <nav class="mnav">
+        <div class="mnav-inner">
+            <div class="mnav-brand">
+                <span class="mnav-name">🎯 Tasker</span>
+            </div>
+            <div class="mnav-actions">
+                {% if user.is_authenticated %}
+                    <span class="t2m">{{ user.username }}</span>
+                    <a href="{% url 'admin:index' %}" class="mbtn mbtn-secondary mbtn-sm">Admin</a>
+                {% else %}
+                    <a href="{% url 'admin:login' %}" class="mbtn mbtn-primary mbtn-sm">Prisijungti</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div style="max-width: 1140px; margin: 0 auto; padding: 40px 24px;">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

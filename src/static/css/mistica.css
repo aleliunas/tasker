@@ -1,0 +1,121 @@
+/* ═══════════════════════════════════════════════════════════════
+   DRAUGŲ NAMAI × MÍSTICA DESIGN SYSTEM
+   Version: 1.0
+   Source: github.com/Telefonica/mistica-web (skin: Telefónica)
+   Font: Urbanist (Google Fonts)
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+  --mistica-color-brand: #FDF87A;
+  --mistica-color-brand-dark: #EEE560;
+  --mistica-color-brand-active: #D9CD4A;
+  --mistica-color-brand-secondary: #C0185A;
+  --mistica-color-brand-secondary-dark: #9E1249;
+  --mistica-color-background: #F4F1EC;
+  --mistica-color-background-container: #FFFFFF;
+  --mistica-color-background-container-selected: #FEFEF0;
+  --mistica-color-background-container-error: #FFF5F9;
+  --mistica-color-background-brand: #1A1A1A;
+  --mistica-color-background-overlay: rgba(26,26,26,0.45);
+  --mistica-color-background-skeleton: #EBE8E3;
+  --mistica-color-background-tag-promo: #FDF87A;
+  --mistica-color-background-tag-active: #FCE8F0;
+  --mistica-color-background-tag-warning: #FFF4EC;
+  --mistica-color-background-tag-success: #EDF7F0;
+  --mistica-color-background-tag-error: #FCE8F0;
+  --mistica-color-background-tag-inactive: #EBE8E3;
+  --mistica-color-text-primary: #1A1A1A;
+  --mistica-color-text-primary-inv: #FFFFFF;
+  --mistica-color-text-secondary: #7A7A7A;
+  --mistica-color-text-disabled: #ABABAB;
+  --mistica-color-text-on-brand: #1A1A1A;
+  --mistica-color-text-link: #C0185A;
+  --mistica-color-text-link-inv: #FDF87A;
+  --mistica-color-text-link-visited: #7B0D38;
+  --mistica-color-neutral-high: #1A1A1A;
+  --mistica-color-neutral-medium: #7A7A7A;
+  --mistica-color-neutral-low: #C8C5C0;
+  --mistica-color-neutral-ultra-low: #EBE8E3;
+  --mistica-color-success: #287D3C;
+  --mistica-color-success-light: #EDF7F0;
+  --mistica-color-warning: #B95000;
+  --mistica-color-warning-light: #FFF4EC;
+  --mistica-color-error: #C0185A;
+  --mistica-color-error-light: #FCE8F0;
+  --mistica-color-info: #0277BD;
+  --mistica-color-info-light: #E8F4FD;
+  --mistica-color-promo: #FDF87A;
+  --mistica-color-border: #C8C5C0;
+  --mistica-color-border-high: #1A1A1A;
+  --mistica-color-border-selected: #C0185A;
+  --mistica-color-border-focus: #FDF87A;
+  --mistica-color-border-error: #C0185A;
+  --mistica-border-radius-container: 8px;
+  --mistica-border-radius-input: 4px;
+  --mistica-border-radius-button: 4px;
+  --mistica-border-radius-checkbox: 4px;
+  --mistica-border-radius-chip: 999px;
+  --mistica-border-radius-tag: 4px;
+  --mistica-border-radius-card: 8px;
+  --mistica-border-radius-popup: 8px;
+  --mistica-border-radius-sheet: 16px 16px 0 0;
+  --mistica-font-family: 'Urbanist', -apple-system, sans-serif;
+  --mistica-text1-size: 12px; --mistica-text1-weight: 400; --mistica-text1-lh: 1.33;
+  --mistica-text2-size: 14px; --mistica-text2-weight: 400; --mistica-text2-lh: 1.43;
+  --mistica-text3-size: 16px; --mistica-text3-weight: 400; --mistica-text3-lh: 1.50;
+  --mistica-text4-size: 18px; --mistica-text4-weight: 400; --mistica-text4-lh: 1.44;
+  --mistica-text5-size: 20px; --mistica-text5-weight: 400; --mistica-text5-lh: 1.40;
+  --mistica-text6-size: 24px; --mistica-text6-weight: 400; --mistica-text6-lh: 1.33;
+  --mistica-text7-size: 28px; --mistica-text7-weight: 400; --mistica-text7-lh: 1.29;
+  --mistica-text8-size: 32px; --mistica-text8-weight: 400; --mistica-text8-lh: 1.25;
+  --mistica-text9-size: 40px; --mistica-text9-weight: 400; --mistica-text9-lh: 1.20;
+  --mistica-text10-size: 48px; --mistica-text10-weight: 400; --mistica-text10-lh: 1.17;
+  --mistica-title1-size: 18px; --mistica-title1-weight: 600; --mistica-title1-lh: 1.44;
+  --mistica-title2-size: 22px; --mistica-title2-weight: 600; --mistica-title2-lh: 1.36;
+  --mistica-title3-size: 28px; --mistica-title3-weight: 600; --mistica-title3-lh: 1.29;
+  --mistica-title4-size: 36px; --mistica-title4-weight: 600; --mistica-title4-lh: 1.22;
+  --mistica-shadow-sm: 0 1px 3px rgba(26,26,26,0.08);
+  --mistica-shadow-md: 0 4px 12px rgba(26,26,26,0.10);
+  --mistica-shadow-lg: 0 8px 32px rgba(26,26,26,0.14);
+  --mistica-transition: 0.15s ease;
+  --mistica-transition-slow: 0.25s ease;
+  --mistica-focus-ring: 0 0 0 3px rgba(253,248,122,0.55);
+}
+@media(min-width:1024px){
+  :root {
+    --mistica-text3-size:18px;--mistica-text4-size:20px;--mistica-text5-size:22px;
+    --mistica-text6-size:28px;--mistica-text7-size:32px;--mistica-text8-size:40px;
+    --mistica-text9-size:48px;--mistica-text10-size:56px;
+    --mistica-title1-size:20px;--mistica-title2-size:24px;--mistica-title3-size:32px;--mistica-title4-size:40px;
+  }
+}
+[data-theme="dark"]{
+  --mistica-color-background:#1A1A1A;
+  --mistica-color-background-container:#242320;
+  --mistica-color-background-brand:#242320;
+  --mistica-color-background-skeleton:#2E2C29;
+  --mistica-color-background-overlay:rgba(0,0,0,0.65);
+  --mistica-color-text-primary:#F4F1EC;
+  --mistica-color-text-secondary:#A8A5A0;
+  --mistica-color-text-disabled:#555250;
+  --mistica-color-neutral-ultra-low:#2E2C29;
+  --mistica-color-border:#3D3B38;
+  --mistica-color-background-container-selected:#1F1E1B;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;}
+body{font-family:var(--mistica-font-family);font-size:var(--mistica-text3-size);line-height:var(--mistica-text3-lh);font-weight:400;background:var(--mistica-color-background);color:var(--mistica-color-text-primary);-webkit-font-smoothing:antialiased;transition:background var(--mistica-transition),color var(--mistica-transition);}
+:focus-visible{outline:2px solid var(--mistica-color-border-focus);outline-offset:2px;border-radius:var(--mistica-border-radius-input);}
+
+/* BUTTON */
+.mbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--mistica-font-family);font-size:var(--mistica-text3-size);font-weight:700;line-height:1;border-radius:var(--mistica-border-radius-button);border:2px solid transparent;cursor:pointer;white-space:nowrap;text-decoration:none;user-select:none;transition:background var(--mistica-transition),border-color var(--mistica-transition),color var(--mistica-transition),opacity var(--mistica-transition);min-height:48px;padding:0 20px;position:relative;outline:none;}
+.mbtn-primary{background:var(--mistica-color-brand);border-color:var(--mistica-color-brand);color:var(--mistica-color-text-on-brand);}
+.mbtn-primary:hover{background:var(--mistica-color-brand-dark);border-color:var(--mistica-color-brand-dark);}
+.mbtn-secondary{background:transparent;border-color:var(--mistica-color-border-high);color:var(--mistica-color-text-primary);}
+
+/* NAVBAR */
+.mnav{background:var(--mistica-color-background-container);border-bottom:1px solid var(--mistica-color-neutral-ultra-low);position:sticky;top:0;z-index:40;box-shadow:var(--mistica-shadow-sm);}
+.mnav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.mnav-name{font-size:var(--mistica-text4-size);font-weight:700;}

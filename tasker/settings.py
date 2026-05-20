@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "rest_framework.authtoken",
     "channels",
 ]
 
@@ -60,10 +61,11 @@ ROOT_URLCONF = "tasker.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / 'src' / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
+                "django.template.context_processors.debug",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
@@ -80,6 +82,13 @@ ASGI_APPLICATION = "tasker.asgi.application"
 DATABASES = {
     'default': env.db(),
 }
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "src" / "static",
+]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Channels
 CHANNEL_LAYERS = {
