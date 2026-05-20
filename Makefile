@@ -19,5 +19,8 @@ shell:
 test:
 	docker compose exec web pytest
 
+manage:
+	docker compose exec web python manage.py $(ARGS)
+
 logs:
 	docker compose logs -f
